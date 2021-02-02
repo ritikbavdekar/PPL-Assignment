@@ -1,0 +1,66 @@
+<program> ---> <k_program> <par_open> <par_close> <curl_open> <statement_list> <curl_close> 
+<statement_list> ---> <dec_list> <assn_list> 
+<dec_list> ---> <dec> <dec_list> 
+<dec_list> ---> <dec> 
+<assn_list> ---> <assn> <assn_list> 
+<assn_list> ---> <assn> 
+<dec> ---> <k_declare> <var_name> <colon> <type> <semicolon> 
+<dec> ---> <k_declare> <k_list> <k_of> <k_variables> <var_list> <colon> <type> <semicolon> 
+<var_list> ---> <var_name> <var_name> 
+<var_list> ---> <var_name> <var_list> 
+<array> ---> <rect_array> 
+<array> ---> <jagged_array> 
+<rect_array> ---> <k_array> <dimensions> <k_of> <k_integer> 
+<dimensions> ---> <sq_open> <low> <doubledots> <high> <sq_close> 
+<dimensions> ---> <sq_open> <low> <doubledots> <high> <sq_close> <dimensions> 
+<low> ---> <const> 
+<low> ---> <var_name> 
+<high> ---> <const> 
+<high> ---> <var_name> 
+<assn> ---> <var_name> <op_equal> <expr> 
+<expr> ---> <bool_expr> 
+<expr> ---> <arith_expr> 
+<bool_expr> ---> <bool_term> <op_or> <bool_expr> 
+<bool_expr> ---> <bool_term> 
+<bool_term> ---> <bool_factor> <op_and> <bool_term> 
+<bool_term> ---> <bool_factor> 
+<bool_factor> ---> <var_name> 
+<bool_factor> ---> <arr_mem> 
+<arith_expr> ---> <arith_term> <low_op> <arith_expr> 
+<arith_expr> ---> <arith_term> 
+<arith_term> ---> <arith_factor> <high_op> <arith_term> 
+<arith_term> ---> <arith_factor> 
+<arith_factor> ---> <var_name> 
+<arith_factor> ---> <const> 
+<arith_factor> ---> <arr_mem> 
+<arr_mem> ---> <var_name> <sq_open> <num_list> <sq_close> 
+<num_list> ---> <const> <num_list> 
+<num_list> ---> <const> 
+<num_list> ---> <var_name> <num_list> 
+<num_list> ---> <var_name> 
+<high_op> ---> <op_mul> <op_div> 
+<low_op> ---> <op_plus> <op_minus> 
+<op_or> ---> ||| 
+<op_and> ---> &&& 
+<op_mul> ---> * 
+<op_div> ---> / 
+<op_plus> ---> + 
+<op_minus> ---> - 
+<op_equal> ---> = 
+<par_open> ---> ( 
+<par_close> ---> ) 
+<curl_open> ---> { 
+<curl_close> ---> } 
+<sq_open> ---> [ 
+<sq_close> ---> ] 
+<colon> ---> : 
+<semicolon> ---> ; 
+<k_program> ---> program 
+<k_integer> ---> integer 
+<k_boolean> ---> boolean 
+<k_real> ---> real 
+<k_declare> ---> declare 
+<type> ---> <k_integer> 
+<type> ---> <k_boolean> 
+<type> ---> <k_real> 
+<type> ---> <array> 

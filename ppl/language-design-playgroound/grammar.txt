@@ -1,0 +1,113 @@
+<program> <k_program> <par_open> <par_close> <curl_open> <statement_list> <curl_close> 
+<statement_list> <dec_list> <assn_list> 
+<dec_list> <dec> <extra_dec_list>
+<extra_dec_list> <dec> <extra_dec_list> 
+<extra_dec_list> <epsilon> 
+<assn_list> <assn> <extra_assn>
+<extra_assn> <assn> <extra_assn> 
+<extra_assn> <epsilon> 
+<dec> <dec_non_jagged>
+<dec> <dec_jagged>
+<dec_non_jagged> declare <decs_non_jagged>
+<dec_jagged> declare <decs_jagged>
+<decs_non_jagged> list of variables <var_list> <colon> <non_jagged_type> <semicolon>
+<decs_non_jagged> <var_name> <colon> <non_jagged_type> <semicolon>
+<non_jagged_type> <k_integer>
+<non_jagged_type> <k_boolean>
+<non_jagged_type> <k_real>
+<non_jagged_type> <rect_array>
+<decs_jagged> list of variables <var_list> <colon> <jagged_array> 
+<decs_jagged> <var_name> <colon> <jagged_array> 
+<var_list> <var_name> <extra_var> 
+<extra_var> <var_name> <extra_var>
+<extra_var> <epsilon> 
+<array> <rect_array> 
+<array> <jagged_array> 
+<rect_array> <k_array> <dimensions> <k_of> <k_integer> 
+<dimensions> <epsilon> 
+<dimensions> <sq_open> <low> <doubledots> <high> <sq_close> <dimensions> 
+<low> <const> 
+<low> <var_name> 
+<high> <const> 
+<high> <var_name>
+<assn> <var_name> <op_equal> <expr> <semicolon>
+<assn> <arr_mem> <op_equal> <expr> <semicolon>
+<expr> <bool_expr> 
+<expr> <arith_expr> 
+<bool_expr> <bool_term> <extra_bool_expr>
+<extra_bool_expr> <op_or> <bool_expr>
+<extra_bool_expr> <epsilon> 
+<bool_term> <bool_factor> <extra_bool_term> 
+<extra_bool_term> <op_and> <bool_term>
+<extra_bool_term> <epsilon> 
+<bool_factor> <var_name> 
+<bool_factor> <arr_mem> 
+<arith_expr> <arith_term> <extra_arith_expr>
+<extra_arith_expr> <low_op> <arith_expr> 
+<extra_arith_expr> <epsilon> 
+<arith_term> <arith_factor> <extra_arith_term>
+<extra_arith_term> <high_op> <arith_term> 
+<extra_arith_term> <epsilon> 
+<arith_factor> <var_name> 
+<arith_factor> <const> 
+<arith_factor> <arr_mem> 
+<arr_mem> <var_name> <sq_open> <num_list> <sq_close>
+<num_list> <const> <num_list> 
+<num_list> <epsilon> 
+<num_list> <var_name> <num_list> 
+<high_op> <op_mul> 
+<high_op> <op_div> 
+<low_op> <op_plus>
+<low_op> <op_minus>
+<op_or> ||| 
+<op_and> &&& 
+<op_mul> * 
+<op_div> / 
+<op_plus> + 
+<op_minus> - 
+<op_equal> = 
+<par_open> (
+<par_close> ) 
+<curl_open> { 
+<curl_close> } 
+<sq_open> [ 
+<sq_close> ] 
+<colon> : 
+<semicolon> ;
+<k_program> program 
+<k_integer> integer 
+<k_boolean> boolean 
+<k_real> real 
+<k_declare> declare 
+<k_list> list
+<k_of> of
+<k_variables> variables
+<type> <k_integer>  
+<type> <k_boolean> 
+<type> <k_real> 
+<type> <array> 
+<k_size> size
+<k_array> array
+<doubledots> .. 
+<epsilon>
+<jagged_array> <jagged_array_A> <jagged_array_B>
+<jagged_array_A> <k_jagged> <k_array> <sq_open> <const> <doubledots> <const> <sq_close>
+<jagged_array_B> <jagged_dim> <k_of> <k_integer> <semicolon> <sub_dim_list>
+<jagged_dim> <2d>
+<jagged_dim> <3d>
+<2d> <sq_open> <sq_close>
+<3d> <sq_open> <sq_close> <sq_open> <sq_close>
+<sub_dim_list> <sub_dim> <extra_sub_dims>
+<extra_sub_dims> <sub_dim> <extra_sub_dims>
+<extra_sub_dims> <epsilon>
+<sub_dim> <sub_dim_A> <sub_dim_B>
+<sub_dim_A> <R1> <sq_open> <const> <sq_close> <colon> <k_size> <const>
+<sub_dim_B> <colon> values <curl_open> <full_list> <curl_close>
+<full_list> <ele_list> <extra_lists>
+<extra_lists> <semicolon> <ele_list> <extra_lists>
+<extra_lists> <epsilon>
+<ele_list> <const> <extra_nums>
+<extra_nums> <const> <extra_nums>
+<extra_nums> <epsilon>
+<k_jagged> jagged
+<R1> R1

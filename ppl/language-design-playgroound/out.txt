@@ -1,0 +1,3 @@
+main3 Variable Name:abcd		Type: Rectangular Array		isStatic: Static		<type=rectangularArray, dimensions=4, range_R1=(2,5), range_R2=(1,3), range_R3=(7,3), range_R4=(6,9), basicElementType=integer>
+Variable Name:ghd2_1		Type: Rectangular Array		isStatic: Static		<type=rectangularArray, dimensions=4, range_R1=(2,5), range_R2=(1,3), range_R3=(7,3), range_R4=(6,9), basicElementType=integer>
+Variable Name:ssd_2_3		Type: Rectangular Array		isStatic: Static		<type=rectangularArray, dimensions=4, range_R1=(2,5), range_R2=(1,3), range_R3=(7,3), range_R4=(6,9), basicElementType=integer>
